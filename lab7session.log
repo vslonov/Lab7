@@ -1,0 +1,212 @@
+Script started on Sun 18 Oct 2020 07:32:16 PM EDT
+[vslonovs@sol28 ~]$ cd l[KLab7Files
+[vslonovs@sol28 Lab7Files]$ ls
+Pokemon.csv
+[vslonovs@sol28 Lab7Files]$ head -20 p[KPokemon.csv
+#,Name,Type 1,Type 2,Total,HP,Attack,Defense,Sp. Atk,Sp. Def,Speed,Generation,Legendary
+1,Bulbasaur,Grass,Poison,318,45,49,49,65,65,45,1,FALSE
+2,Ivysaur,Grass,Poison,405,60,62,63,80,80,60,1,FALSE
+3,Venusaur,Grass,Poison,525,80,82,83,100,100,80,1,FALSE
+3,VenusaurMega Venusaur,Grass,Poison,625,80,100,123,122,120,80,1,FALSE
+4,Charmander,Fire,,309,39,52,43,60,50,65,1,FALSE
+5,Charmeleon,Fire,,405,58,64,58,80,65,80,1,FALSE
+6,Charizard,Fire,Flying,534,78,84,78,109,85,100,1,FALSE
+6,CharizardMega Charizard X,Fire,Dragon,634,78,130,111,130,85,100,1,FALSE
+6,CharizardMega Charizard Y,Fire,Flying,634,78,104,78,159,115,100,1,FALSE
+7,Squirtle,Water,,314,44,48,65,50,64,43,1,FALSE
+8,Wartortle,Water,,405,59,63,80,65,80,58,1,FALSE
+9,Blastoise,Water,,530,79,83,100,85,105,78,1,FALSE
+9,BlastoiseMega Blastoise,Water,,630,79,103,120,135,115,78,1,FALSE
+10,Caterpie,Bug,,195,45,30,35,20,20,45,1,FALSE
+11,Metapod,Bug,,205,50,20,55,25,25,30,1,FALSE
+12,Butterfree,Bug,Flying,395,60,45,50,90,80,70,1,FALSE
+13,Weedle,Bug,Poison,195,40,35,30,20,20,50,1,FALSE
+14,Kakuna,Bug,Poison,205,45,25,50,25,25,35,1,FALSE
+15,Beedrill,Bug,Poison,395,65,90,40,45,80,75,1,FALSE
+[vslonovs@sol28 Lab7Files]$ vim makefile
+[?1h=[1;24r[m[m[0m[H[J[24;1H"makefile" [New File][2;1H[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[0m[24;63H0,0-1[9CAll[1;1H[24;1H[1m-- INSERT --[0m[24;13H[K[24;63H0,1[11CAll[1;1Ho[24;63H1,2[1;2H[1;1H[K[24;65H1[1;1Hs[24;65H2[1;2Hay[24;65H4[1;4H_[24;65H5[1;5Hh[24;65H6[1;6He[24;65H7[1;7Hr[24;65H8[1;8H[1;7H[K[24;65H7[1;7H[1;6H[K[24;65H6[1;6He[24;65H7[1;7Hl[24;65H8[1;8Hl[24;65H9[1;9Ho[24;65H10[1;10H:[24;66H1[1;11H[2;1H[K[24;63H2,1 [2;1H[24;65H2-9[2;9Hcut[24;65H5-12[2;12H[24;65H6-13[2;13H-[24;65H7-14[2;14Hd[24;65H8-15[2;15H[24;65H9-16[2;16H/[24;65H10-17[2;17H,[24;66H1-18[2;18H/[24;66H2-19[2;19H[24;66H3-20[2;20H-[24;66H4-21[2;21Hf[24;66H5-22[2;22H[24;66H6-23[2;23H2[24;66H7-24[2;24H[24;66H8-25[2;25H[24;66H7-24[2;24H[2;23H[K[24;66H6-23[2;23H[24;66H5-22[2;22H[2;21H[K[24;66H4-21[2;21H[2;20H[K[24;66H3-20[2;20H[24;66H2-19[2;19H[2;18H[K[24;66H1-18[2;18H[2;17H[K[24;66H0-17[2;17H[2;16H[K[24;65H9-16 [2;16H'[24;65H10-17[2;17H,[24;66H1-18[2;18H'[24;66H2-19[2;19H[24;66H3-20[2;20H-[24;66H4-21[2;21Hf[24;66H5-22[2;22H[24;66H6-23[2;23H2 Pokem[24;65H23-30[2;30Ho[24;66H4-31[2;31Hn[24;66H5-32[2;32H.[24;66H6-33[2;33Hc[24;66H7-34[2;34Hs[24;66H8-35[2;35Hv[24;66H9-36[2;36H[24;65H30-37[2;37H>[24;66H1-38[2;38H[24;66H2-39[2;39HP[24;66H3-40[2;40Ho[24;66H4-41[2;41Hk[24;66H5-42[2;42He[24;66H6-43[2;43Hm[24;66H7-44[2;44Ho[24;66H8-45[2;45Hn[24;66H9-46[2;46H2[24;65H40-47[2;47H.[24;66H1-48[2;48Hc[24;66H2-49[2;49Hs[24;66H3-50[2;50Hv[24;66H4-51[2;51H[3;1H[K[24;63H3,1    [3;1H[24;65H2-9[3;9Hs[24;65H3-10[3;10Hor[24;65H5-12[3;12Ht[24;65H6-13[3;13H[24;65H7-14[3;14HP[24;65H8-15[3;15Ho[24;65H9-16[3;16Hk[24;65H10-17[3;17He[24;66H1-18[3;18Hm[24;66H2-19[3;19Ho[24;66H3-20[3;20Hn[24;66H4-21[3;21H2[24;66H5-22[3;22H.[24;66H6-23[3;23Hc[24;66H7-24[3;24Hs[24;66H8-25[3;25Hv[24;66H9-26[3;26H[24;65H20-27[3;27H>[24;66H2-29[3;29HP[24;66H3-30[3;30Ho[24;66H4-31[3;31Hk[24;66H5-32[3;32He[24;66H6-33[3;33Hm[24;66H7-34[3;34Ho[24;66H8-35[3;35Hn[24;66H9-36[3;36HS[24;65H30-37[3;37Ho[24;66H1-38[3;38Hr[24;66H2-39[3;39Ht[24;66H3-40[3;40He[24;66H4-41[3;41Hd[24;66H5-42[3;42H[24;66H6-43[3;43H[24;66H5-42[3;42H.[24;66H6-43[3;43Hc[24;66H7-44[3;44Hs[24;66H8-45[3;45Hv[24;66H9-46[3;46H[4;1H[K[24;63H4,1    [4;1H[24;65H2-9[4;9Hr[24;65H3-10[4;10Hm[24;65H4-11[4;11H[24;65H5-12[4;12HP[24;65H6-13[4;13Ho[24;65H7-14[4;14Hk[24;65H8-15[4;15He[24;65H9-16[4;16Hm[24;65H10-17[4;17Ho[24;66H1-18[4;18Hn[24;66H2-19[4;19H2[24;66H3-20[4;20H.[24;66H4-21[4;21Hcsv[24;66H7-24[4;24H[24;1H[K[4;23H[24;63H4,16-23[7CAll[4;23H[24;63H[K[24;1H::wq"makefile" [New] 4L, 111C written[?1l>
+[vslonovs@sol28 Lab7Files]$ make
+cut -d ',' -f 2 Pokemon.csv > Pokemon2.csv
+sort Pokemon2.csv > PokemonSorted.csv
+rm Pokemon2.csv
+[vslonovs@sol28 Lab7Files]$ ls
+makefile  Pokemon.csv  PokemonSorted.csv
+[vslonovs@sol28 Lab7Files]$ head -50 PokemonSorted.csv
+Abomasnow
+AbomasnowMega Abomasnow
+Abra
+Absol
+AbsolMega Absol
+Accelgor
+AegislashBlade Forme
+AegislashShield Forme
+Aerodactyl
+AerodactylMega Aerodactyl
+Aggron
+AggronMega Aggron
+Aipom
+Alakazam
+AlakazamMega Alakazam
+Alomomola
+Altaria
+AltariaMega Altaria
+Amaura
+Ambipom
+Amoonguss
+Ampharos
+AmpharosMega Ampharos
+Anorith
+Arbok
+Arcanine
+Arceus
+Archen
+Archeops
+Ariados
+Armaldo
+Aromatisse
+Aron
+Articuno
+Audino
+AudinoMega Audino
+Aurorus
+Avalugg
+Axew
+Azelf
+Azumarill
+Azurill
+Bagon
+Baltoy
+Banette
+BanetteMega Banette
+Barbaracle
+Barboach
+Basculin
+Bastiodon
+[vslonovs@sol28 Lab7Files]$ Head -9[K100 [K[K[K[K[K[K[K[K[K[Khjead [K[K[K[K[Kead -2[K100 PokemonSorted.csv
+Abomasnow
+AbomasnowMega Abomasnow
+Abra
+Absol
+AbsolMega Absol
+Accelgor
+AegislashBlade Forme
+AegislashShield Forme
+Aerodactyl
+AerodactylMega Aerodactyl
+Aggron
+AggronMega Aggron
+Aipom
+Alakazam
+AlakazamMega Alakazam
+Alomomola
+Altaria
+AltariaMega Altaria
+Amaura
+Ambipom
+Amoonguss
+Ampharos
+AmpharosMega Ampharos
+Anorith
+Arbok
+Arcanine
+Arceus
+Archen
+Archeops
+Ariados
+Armaldo
+Aromatisse
+Aron
+Articuno
+Audino
+AudinoMega Audino
+Aurorus
+Avalugg
+Axew
+Azelf
+Azumarill
+Azurill
+Bagon
+Baltoy
+Banette
+BanetteMega Banette
+Barbaracle
+Barboach
+Basculin
+Bastiodon
+Bayleef
+Beartic
+Beautifly
+Beedrill
+BeedrillMega Beedrill
+Beheeyem
+Beldum
+Bellossom
+Bellsprout
+Bergmite
+Bibarel
+Bidoof
+Binacle
+Bisharp
+Blastoise
+BlastoiseMega Blastoise
+Blaziken
+BlazikenMega Blaziken
+Blissey
+Blitzle
+Boldore
+Bonsly
+Bouffalant
+Braixen
+Braviary
+Breloom
+Bronzong
+Bronzor
+Budew
+Buizel
+Bulbasaur
+Buneary
+Bunnelby
+Burmy
+Butterfree
+Cacnea
+Cacturne
+Camerupt
+CameruptMega Camerupt
+Carbink
+Carnivine
+Carracosta
+Carvanha
+Cascoon
+Castform
+Caterpie
+Celebi
+Chandelure
+Chansey
+Charizard
+[vslonovs@sol28 Lab7Files]$ make clean
+make: *** No rule to make target `clean'.  Stop.
+[vslonovs@sol28 Lab7Files]$ exit
+exit
+
+Script done on Sun 18 Oct 2020 07:35:09 PM EDT
